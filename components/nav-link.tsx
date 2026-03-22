@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type NavLinkProps = {
   href: string;
@@ -11,8 +11,15 @@ type NavLinkProps = {
 
 export function NavLink({ href, children }: NavLinkProps) {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const isActive =
-    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+    mounted &&
+    (pathname === href || (href !== "/" && pathname.startsWith(`${href}/`)));
 
   return (
     <Link

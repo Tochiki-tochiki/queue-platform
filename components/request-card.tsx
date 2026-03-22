@@ -16,26 +16,26 @@ export function RequestCard({ request }: RequestCardProps) {
         <StatusBadge status={request.status} />
       </div>
 
-      <dl className="mt-5 grid gap-3 text-sm text-slate-600">
+      <div className="mt-5 grid gap-3 text-sm text-slate-600">
         <div className="flex flex-col gap-1">
-          <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
             Location
-          </dt>
-          <dd>{request.location}</dd>
+          </p>
+          <p>{request.location}</p>
         </div>
         <div className="flex flex-col gap-1">
-          <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
             Datetime
-          </dt>
-          <dd>{request.datetime}</dd>
+          </p>
+          <p>{request.datetime}</p>
         </div>
         <div className="flex flex-col gap-1">
-          <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
             Reward
-          </dt>
-          <dd className="text-base font-semibold text-slate-900">{request.reward}</dd>
+          </p>
+          <p className="text-base font-semibold text-slate-900">{request.reward}</p>
         </div>
-      </dl>
+      </div>
 
       <p className="mt-5 line-clamp-3 text-sm leading-7 text-slate-600">
         {request.description}

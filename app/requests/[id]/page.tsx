@@ -33,12 +33,12 @@ export default async function RequestDetailPage({
           <StatusBadge status={request.status} />
         </div>
 
-        <dl className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <InfoItem label="場所" value={request.location} />
           <InfoItem label="日時" value={request.datetime} />
           <InfoItem label="報酬" value={request.reward} />
           <InfoItem label="依頼者" value={request.clientName} />
-        </dl>
+        </div>
 
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-slate-900">依頼内容</h2>
@@ -101,8 +101,8 @@ type InfoItemProps = {
 function InfoItem({ label, value }: InfoItemProps) {
   return (
     <div className="rounded-2xl bg-slate-50 p-4">
-      <dt className="text-sm font-semibold text-slate-900">{label}</dt>
-      <dd className="mt-2 text-sm leading-7 text-slate-600">{value}</dd>
+      <p className="text-sm font-semibold text-slate-900">{label}</p>
+      <p className="mt-2 text-sm leading-7 text-slate-600">{value}</p>
     </div>
   );
 }

@@ -135,26 +135,26 @@ export function RequestForm() {
           <div className="mt-4">
             <StatusBadge status={formData.status} />
           </div>
-          <dl className="mt-6 grid gap-4 text-sm text-slate-600">
+          <div className="mt-6 grid gap-4 text-sm text-slate-600">
             <div>
-              <dt className="font-semibold text-slate-900">場所</dt>
-              <dd className="mt-1">{formData.location || "未入力"}</dd>
+              <p className="font-semibold text-slate-900">場所</p>
+              <p className="mt-1">{formData.location || "未入力"}</p>
             </div>
             <div>
-              <dt className="font-semibold text-slate-900">日時</dt>
-              <dd className="mt-1">{formData.datetime || "未入力"}</dd>
+              <p className="font-semibold text-slate-900">日時</p>
+              <p className="mt-1">{formData.datetime || "未入力"}</p>
             </div>
             <div>
-              <dt className="font-semibold text-slate-900">報酬</dt>
-              <dd className="mt-1">{formData.reward || "未入力"}</dd>
+              <p className="font-semibold text-slate-900">報酬</p>
+              <p className="mt-1">{formData.reward || "未入力"}</p>
             </div>
             <div>
-              <dt className="font-semibold text-slate-900">内容</dt>
-              <dd className="mt-1 leading-7">
+              <p className="font-semibold text-slate-900">内容</p>
+              <p className="mt-1 leading-7">
                 {formData.description || "ここに依頼内容が表示されます。"}
-              </dd>
+              </p>
             </div>
-          </dl>
+          </div>
         </div>
 
         {submittedRequest ? (
