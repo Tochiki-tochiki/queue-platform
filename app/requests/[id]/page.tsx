@@ -68,7 +68,7 @@ export default async function RequestDetailPage({
           <p className="mt-3 text-sm leading-7 text-slate-600">
             条件とステータスを確認したうえで、この依頼へ応募できます。
           </p>
-          <button className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+          <button className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
             応募する
           </button>
           <Link
